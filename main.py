@@ -1,1 +1,1 @@
-hoi popo zit op hielen. moet longen. heb die 2barkie genackt. ben naar osso.
+print ('hoi')
