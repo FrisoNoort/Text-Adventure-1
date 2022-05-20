@@ -1,32 +1,36 @@
 # all the rooms!
 rooms = {
-  "outside the club" :  {
+  "outside" :  {
     "title" : "outside the club",
-    "description" : "wanne go inside",
+    "description" : "wanna go inside?",
     "options": ["In the Club", "no"],
   },
 
-  "In the Club" :  {
+  "club" :  {
     "title" : "In the Club",
     "description" : "your in the club what you wanne do",
      "options": ["dance", "Bar"]
   },
 
-  "Bar" :  {
-    "title" : "bar",
+  "bar" :  {
+    "title" : "At the Bar",
     "description" : "aight mate, what can i get you",
      "options": ["Baco", "Tequila"]
   },
 
   "no" :  {
-    "title" : "no",
-    "description" : "You died poopoohead"
+    "title" : "no no no",
+    "description" : "You died poopoohead",
+    "options" : ["outside the club" , "bar"]
   }
 }
 
 #the game "engine"
 def game(room):
   currentRoom = rooms[room]
+  
+  if room == 'outside the club':
+    print('Welcome to the Club')
 
   # get this room's title and description
   title = currentRoom["title"]
@@ -34,12 +38,14 @@ def game(room):
   options = currentRoom["options"]
 
   # show to user
-  print(f"You're in the {title}")
+  print(f"{title}")
   print(description)
   print("type the name of the room you would like to go next: ")  
 
   print(", ".join(options))
   nextRoom = input()
+
+  
 
   #TODO: check and sanitize input
   
