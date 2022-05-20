@@ -1,26 +1,26 @@
 # all the rooms!
 rooms = {
-  "sleepingRoom" :  {
-    "title" : "Sleepingroom",
-    "description" : "There's a bed in the room. This must be a room for sleeping",
-    "options": ["kitchen", "slaapkamer"],
+  "outside the club" :  {
+    "title" : "outside the club",
+    "description" : "wanne go inside",
+    "options": ["In the Club", "no"],
   },
 
-  "kitchen" :  {
-    "title" : "Kitchen",
-    "description" : "Hmmm... what's for dinner?",
-     "options": ["a", "b"]
+  "In the Club" :  {
+    "title" : "In the Club",
+    "description" : "your in the club what you wanne do",
+     "options": ["dance", "Bar"]
   },
 
-  "forrest" :  {
-    "title" : "Forrest",
-    "description" : "There's a bunch of trees. I am Groot! Says a tree",
-     "options": ["aap", "noot"]
+  "Bar" :  {
+    "title" : "bar",
+    "description" : "aight mate, what can i get you",
+     "options": ["Baco", "Tequila"]
   },
 
-  "slaapkamer" :  {
-    "title" : "Slaapkamer",
-    "description" : "Zzzzzz"
+  "no" :  {
+    "title" : "no",
+    "description" : "You died poopoohead"
   }
 }
 
@@ -47,4 +47,4 @@ def game(room):
   game(nextRoom)
 
 #start the game from the sleepingroom
-game("sleepingRoom")
+game("outside the club")
