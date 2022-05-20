@@ -3,7 +3,7 @@ rooms = {
   "outside" :  {
     "title" : "outside the club",
     "description" : "wanna go inside?",
-    "options": ["In the Club", "no"],
+    "options": ["Club", "no"],
   },
 
   "club" :  {
@@ -43,14 +43,19 @@ def game(room):
   print("type the name of the room you would like to go next: ")  
 
   print(", ".join(options))
-  nextRoom = input()
-
   
+  nextRoom = input()
+  nextRoom= nextRoom.lower()
 
+  if nextRoom in options:
+    game(nextRoom)
+  else:
+    print('Thats not an option... Try again genius!')
+    game(room)
   #TODO: check and sanitize input
   
   # go to next room
-  game(nextRoom)
+  # game(nextRoom)
 
 #start the game from the sleepingroom
-game("outside the club")
+game("outside")
