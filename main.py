@@ -14,14 +14,14 @@ rooms = {
 
   "bar" :  {
     "title" : "At the Bar",
-    "description" : "aight mate, what can i get you",
+    "description" : "Alright mate, what can i get you",
      "options": ["Baco", "Tequila"]
   },
 
   "no" :  {
     "title" : "no no no",
     "description" : "You died poopoohead",
-    "options" : ["outside the club" , "bar"]
+    "options" : ["" , "bar"]
   }
 }
 
@@ -29,8 +29,12 @@ rooms = {
 def game(room):
   currentRoom = rooms[room]
   
-  if room == 'outside the club':
-    print('Welcome to the Club')
+  if room == 'outside':
+    print('Welcome to the Club!')
+    print('Your goal is to survive the night and get home.')
+    print('To do this you will have to make crucial choises.')
+    print('Good luck adventurer!')
+    print("")
 
   # get this room's title and description
   title = currentRoom["title"]
@@ -52,10 +56,6 @@ def game(room):
   else:
     print('Thats not an option... Try again genius!')
     game(room)
-  #TODO: check and sanitize input
   
-  # go to next room
-  # game(nextRoom)
-
 #start the game from the sleepingroom
 game("outside")
