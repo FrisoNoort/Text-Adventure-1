@@ -1,7 +1,10 @@
+from os import system
+
 # all the rooms!
 rooms = {
-  "outside" :  {
-    "title" : "outside the club",
+  "start" :  {
+    "title" : 'Welcome to the Club! \nYour goal is to survive the night and get home. \nTo do this you will have to make crucial choises. \nGood luck adventurer! \n'
+    ,
     "description" : "wanna go inside?",
     "options": ["Club", "no"],
   },
@@ -27,14 +30,8 @@ rooms = {
 
 #the game "engine"
 def game(room):
+  system('clear')
   currentRoom = rooms[room]
-  
-  if room == 'outside':
-    print('Welcome to the Club!')
-    print('Your goal is to survive the night and get home.')
-    print('To do this you will have to make crucial choises.')
-    print('Good luck adventurer!')
-    print("")
 
   # get this room's title and description
   title = currentRoom["title"]
@@ -44,18 +41,19 @@ def game(room):
   # show to user
   print(f"{title}")
   print(description)
-  print("type the name of the room you would like to go next: ")  
+  print("Choose one of these options: ")  
 
   print(", ".join(options))
   
   nextRoom = input()
   nextRoom= nextRoom.lower()
-
+  
   if nextRoom in options:
     game(nextRoom)
   else:
     print('Thats not an option... Try again genius!')
+    
     game(room)
   
 #start the game from the sleepingroom
-game("outside")
+game("start")
