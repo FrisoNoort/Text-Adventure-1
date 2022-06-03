@@ -6,13 +6,13 @@ rooms = {
     "title" : 'Welcome to the Club! \nYour goal is to survive the night and get home. \nTo do this you will have to make crucial choises. \nGood luck adventurer! \n'
     ,
     "description" : "wanna go inside?",
-    "options": ["Club", "no"],
+    "options": ["club", "no"],
   },
 
   "club" :  {
     "title" : "In the Club",
     "description" : "your in the club what you wanne do",
-     "options": ["dance", "Bar"]
+     "options": ["dance", "bar"]
   },
 
   "bar" :  {
@@ -24,8 +24,15 @@ rooms = {
   "no" :  {
     "title" : "no no no",
     "description" : "You died poopoohead",
-    "options" : ["" , "bar"]
-  }
+    "options" : ["start"]
+  },
+    
+  "dance" : {
+    "title": "On the dance floor",
+    "description" : "You spot a girl dancing alone",
+    "options" : ["dance with her", "dance alone", "bar"]
+  },
+
 }
 
 #the game "engine"
