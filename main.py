@@ -82,6 +82,7 @@ rooms = {
     "options": ['1','2','3','4', ],
     "newrooms": ["death2","death2","back","back"]
   },
+  
   "back" :  {
     "title" : 'To the back?' ,
     "description" : 'The girl liked ur pickup-line so much that she asked you to go home with her.\n Do you dare to go?' ,
