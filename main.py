@@ -54,6 +54,21 @@ rooms = {
        "newrooms": ['girl','death2','bar' ]
   },
 
+  "bar" :  {
+    "title" : 'At the bar' ,
+    "description" : 'you take a seat at the bar and the bartender greets you: "aight mate, what can i get you? \n' ,
+     "options": ['vodka', 'tequila', 'the girl'],
+        "newrooms": ['shot', 'shot']
+  },
+
+  "shot" :  {
+    "title" : "Your'e shot is ready" ,
+    "description" : "You took the shot like a man, wanne take another" ,
+     "options": ['another', 'no' ],
+        "newrooms": ['shot','bar' ]
+  },
+
+  
   "girl" :  {
     "title" : "You walk up to her and start dancing",
     "description" : "You think she's beautiful so you use your best pickup-line. Better choose wisely... \n 1:Are you wifi cause i am totaly feeling a conection. \n 2: Treat me like a pirate and give me your booty \n 3: I may not go down in history, but i will go down on you. \n 4:Aside from being sexy what do you do for a living ",
