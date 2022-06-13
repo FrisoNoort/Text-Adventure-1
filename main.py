@@ -24,7 +24,7 @@ rooms = {
     "title" : "In the Club",
     "description" : "your in the club what you wanna do",
      "options": ["dance", "bar"],
-        "newrooms": ["room1", "room2"]
+        "newrooms": ["dance", "bar"]
   },
 
   "bar" :  {
@@ -33,10 +33,23 @@ rooms = {
      "options": ["Baco", "Tequila"],
         "newrooms": ["room1", "room2"]
   },
-  
+
+  "dance" :  {
+    "title" : 'dance floor' ,
+    "description" : 'The music is blasting in your ears. \n Everybody around you is dancing and having fun. \n You see this girl dancing alone. \n Do you go up to her? \n' ,
+    "options": ['Yes', 'No', 'bar' ],
+       "newrooms": ['girl','alone','bar' ]
+  },
+
+  "girl" :  {
+    "title" : ,
+    "description" : "You walk up to her and start dancing. \n You think she's beuatifull so you use a pickup line. Better choose wisely... \n 1:Are you wifi cause i am totaly feeling a conection. \n 2: Treat me like a pirate and give me your booty \n 3:  \n 4:Aside from being sexy what do you do for a living ",
+     "options": ['1','2','3','4' ],
+        "newrooms": [, ]
+  },
     "death" :  {
     "title" : "Oh no you died...",
-    "description" : "You died poopoohead",
+    "description" : "You made the wrong move and met god. wanne retry",
     "options" : ["exit" , "retry"],
           "newrooms": ["room1", "start"]
   }
@@ -44,7 +57,7 @@ rooms = {
 
 #the game "engine"
 def game(room):
-#  system('clear')
+  system('clear')
   currentRoom = rooms[room]
   
   title = currentRoom["title"]
@@ -76,3 +89,10 @@ def game(room):
     game(room)
   
 game("start")
+
+#"inside" :  {
+#    "title" : ,
+#    "description" : ,
+ #    "options": [, ],
+ #       "newrooms": [, ]
+  #},
