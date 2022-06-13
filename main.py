@@ -1,66 +1,78 @@
 from os import system
+from os import system
+from colorama import Fore
+import sys
 
 # all the rooms!
 rooms = {
   "start" :  {
-    "title" : 'Welcome to the Club! \nYour goal is to survive the night and get home. \nTo do this you will have to make crucial choises. \nGood luck adventurer! \n'
+    "title" : 'Welcome to the Club! \n Your goal is to survive the night and get home. \n To do this you will have to make crucial choises. \n Good luck adventurer! \n'
     ,
-    "description" : "wanna go inside?",
-    "options": ["club", "no"],
+    "description" : "You arrived at the Club.\n In the distance you see a door to the club and a ladder to the roof.",
+    "options": ["door", "ladder"],
+    "newrooms": ["inside", "ladder"]
   },
 
-  "club" :  {
+  "ladder" :  {
+    "title" : "Climbing the ladder...",
+    "description" : "You started to climb the ladder but halfway you hear the ladder starting to crack. \n What do you do?",
+     "options": ["up", "down"],
+     "newrooms": ["death", "start"]
+  },
+  
+  "inside" :  {
     "title" : "In the Club",
-    "description" : "your in the club what you wanne do",
-     "options": ["dance", "bar"]
+    "description" : "your in the club what you wanna do",
+     "options": ["dance", "bar"],
+        "newrooms": ["room1", "room2"]
   },
 
   "bar" :  {
     "title" : "At the Bar",
     "description" : "Alright mate, what can i get you",
-     "options": ["Baco", "Tequila"]
+     "options": ["Baco", "Tequila"],
+        "newrooms": ["room1", "room2"]
   },
-
-  "no" :  {
-    "title" : "no no no",
+  
+    "death" :  {
+    "title" : "Oh no you died...",
     "description" : "You died poopoohead",
-    "options" : ["start"]
-  },
-    
-  "dance" : {
-    "title": "On the dance floor",
-    "description" : "You spot a girl dancing alone",
-    "options" : ["dance with her", "dance alone", "bar"]
-  },
-
+    "options" : ["exit" , "retry"],
+          "newrooms": ["room1", "start"]
+  }
 }
 
 #the game "engine"
 def game(room):
-  system('clear')
+#  system('clear')
   currentRoom = rooms[room]
-
-  # get this room's title and description
+  
   title = currentRoom["title"]
   description = currentRoom["description"]  
   options = currentRoom["options"]
+  newrooms = currentRoom["newrooms"]
 
-  # show to user
-  print(f"{title}")
-  print(description)
+  print(Fore.BLUE,title)
+  print(Fore.LIGHTWHITE_EX,description)
   print("Choose one of these options: ")  
 
   print(", ".join(options))
   
-  nextRoom = input()
-  nextRoom= nextRoom.lower()
+  userinput = input()
+  userinput = userinput.lower()
   
-  if nextRoom in options:
-    game(nextRoom)
+  if userinput in options:
+   if userinput == ("exit"):
+     sys.exit()
+   else :
+    index = options.index(userinput)
+    #index uilezen en opzoeken in newlist
+    #print(index)  
+    #print(newrooms[index])
+    game(newrooms[index])
   else:
     print('Thats not an option... Try again genius!')
-    
+
     game(room)
   
-#start the game from the sleepingroom
 game("start")
