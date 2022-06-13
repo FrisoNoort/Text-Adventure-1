@@ -5,7 +5,7 @@ import sys
 # all the rooms!
 rooms = {
   "start" :  {
-    "title" : 'Welcome to the Club! \n Your goal is to survive the night and steal all the money. \n To do this you will have to make crucial choises. \n Good luck adventurer! \n'
+    "title" : 'Welcome to the Club! \n Your goal is to survive the night and steal all the money. \n To do this you will have to make crucial choices. \n Good luck adventurer! \n'
     ,
     "description" : "You arrived at the Club.\n In the distance you see the front door to the club and a ladder to the roof.",
     "options": ["door", "ladder"],
@@ -21,7 +21,7 @@ rooms = {
  
   "roof" :  {
   "title" : "On the roof!",
-  "description" : "You barely made it to the roof, you are so frightened you are debating to go back with the ladder but you also see a cabin up ahead ",
+  "description" : "You barely made it to the roof, you are so frightened you are debating to go back down with the ladder but you also see a cabin up ahead ",
   "options": ["cabin", "go back"],
   "newrooms": ["cabin", "start"]
   },
@@ -34,7 +34,7 @@ rooms = {
   },
   
   "note" :  {
-  "title" : "The note sais: 'code : 42069'",
+  "title" : "The note says: 'code : 42069'",
   "description" : "",
   "options": ["okay",],
   "newrooms": ["cabin"]
@@ -42,7 +42,7 @@ rooms = {
   
   "inside" :  {
   "title" : "In the Club",
-  "description" : "You entered the club and can choose to do two things:\n go to the dancefloor or go to the bar, you also ",
+  "description" : "You entered the club and can choose to do three things:\n go to the dancefloor or go to the bar, you also see an office in the corner of your eye.",
   "options": ["dance", "bar", "office"],
   "newrooms": ["dance", "bar", "frontoffice"]
   },
@@ -69,8 +69,8 @@ rooms = {
   },
 
   "shot" :  {
-    "title" : "Your'e shot is ready" ,
-    "description" : "You took the shot like a man, wanne take another" ,
+    "title" : "Your shot is ready" ,
+    "description" : "You took the shot like a man, want to take another?" ,
      "options": ['another', 'no' ],
         "newrooms": ['shot','bar' ]
   },
@@ -124,8 +124,8 @@ def game(room):
   newrooms = currentRoom["newrooms"]
 
   print(Fore.BLUE,title)
-  print(Fore.LIGHTWHITE_EX,description)
-  print(" Choose one of these options: ")  
+  print(Fore.LIGHTBLUE_EX,description)
+  print(Fore.LIGHTWHITE_EX," Choose one of these options: ")  
 
   print("", ", ".join(options))
   
