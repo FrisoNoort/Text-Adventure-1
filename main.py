@@ -1,5 +1,4 @@
 from os import system
-from os import system
 from colorama import Fore
 import sys
 
@@ -8,50 +7,72 @@ rooms = {
   "start" :  {
     "title" : 'Welcome to the Club! \n Your goal is to survive the night and get home. \n To do this you will have to make crucial choises. \n Good luck adventurer! \n'
     ,
-    "description" : "You arrived at the Club.\n In the distance you see a door to the club and a ladder to the roof.",
+    "description" : "You arrived at the Club.\n In the distance you see the front door to the club and a ladder to the roof.",
     "options": ["door", "ladder"],
     "newrooms": ["inside", "ladder"]
   },
 
   "ladder" :  {
-    "title" : "Climbing the ladder...",
-    "description" : "You started to climb the ladder but halfway you hear the ladder starting to crack. \n What do you do?",
-     "options": ["up", "down"],
-     "newrooms": ["death", "start"]
+  "title" : "Climbing the ladder...",
+  "description" : "You started to climb the ladder but halfway you hear the ladder starting to crack. \n What do you do?",
+  "options": ["up", "down"],
+  "newrooms": ["roof", "start"]
+  },
+ 
+  "roof" :  {
+  "title" : "On the roof!",
+  "description" : "You barely made it to the roof, you are so frightened you are debating to go back with the ladder but you also see a cabin up ahead ",
+  "options": ["cabin", "go back"],
+  "newrooms": ["cabin", "start"]
+  },
+
+  "cabin" :  {
+  "title" : "In the roofcabin",
+  "description" : "You secretly entered the roofcabin and see a note... \n do you read it or go back to the roof?",
+  "options": ["read note" , "roof"],
+  "newrooms": ["note","roof"]
+  },
+  
+  "note" :  {
+  "title" : "The note sais: 'code : 42069'",
+  "description" : "",
+  "options": ["okay",],
+  "newrooms": ["cabin"]
   },
   
   "inside" :  {
-    "title" : "In the Club",
-    "description" : "your in the club what you wanna do",
-     "options": ["dance", "bar"],
-        "newrooms": ["dance", "bar"]
-  },
-
-  "bar" :  {
-    "title" : "At the Bar",
-    "description" : "Alright mate, what can i get you",
-     "options": ["Baco", "Tequila"],
-        "newrooms": ["room1", "room2"]
+  "title" : "In the Club",
+  "description" : "You entered the club and can choose to do two things:\n go to the dancefloor or go to the bar",
+  "options": ["dance", "bar"],
+  "newrooms": ["dance", "bar"]
   },
 
   "dance" :  {
     "title" : 'dance floor' ,
     "description" : 'The music is blasting in your ears. \n Everybody around you is dancing and having fun. \n You see this girl dancing alone. \n Do you go up to her? \n' ,
-    "options": ['Yes', 'No', 'bar' ],
-       "newrooms": ['girl','alone','bar' ]
+    "options": ['yes', 'no', 'bar' ],
+       "newrooms": ['girl','death2','bar' ]
   },
 
   "girl" :  {
-    "title" : ,
-    "description" : "You walk up to her and start dancing. \n You think she's beuatifull so you use a pickup line. Better choose wisely... \n 1:Are you wifi cause i am totaly feeling a conection. \n 2: Treat me like a pirate and give me your booty \n 3:  \n 4:Aside from being sexy what do you do for a living ",
+    "title" : "You walk up to her and start dancing",
+    "description" : "You think she's beautiful so you use your best pickup-line. Better choose wisely... \n 1:Are you wifi cause i am totaly feeling a conection. \n 2: Treat me like a pirate and give me your booty \n 3: I may not go down in history, but i will go down on you. \n 4:Aside from being sexy what do you do for a living ",
      "options": ['1','2','3','4' ],
-        "newrooms": [, ]
+        "newrooms": ["","","",""]
   },
-    "death" :  {
-    "title" : "Oh no you died...",
-    "description" : "You made the wrong move and met god. wanne retry",
-    "options" : ["exit" , "retry"],
-          "newrooms": ["room1", "start"]
+  
+  "death1" :  {
+  "title" : "Oh no you died...",
+  "description" : "You died poopoohead",
+  "options" : ["exit" , "retry"],
+  "newrooms": ["", "start"]
+  },
+  
+  "death2" :  {
+  "title" : "No Bitches?",
+  "description" : "Unfortunately you failed to get bitches...\n i guess you really are a disappointment,\n would you like to try again? ",
+  "options" : ["exit" , "retry"],
+  "newrooms": ["", "start"]
   }
 }
 
@@ -67,9 +88,9 @@ def game(room):
 
   print(Fore.BLUE,title)
   print(Fore.LIGHTWHITE_EX,description)
-  print("Choose one of these options: ")  
+  print(" Choose one of these options: ")  
 
-  print(", ".join(options))
+  print("", ", ".join(options))
   
   userinput = input()
   userinput = userinput.lower()
@@ -89,10 +110,3 @@ def game(room):
     game(room)
   
 game("start")
-
-#"inside" :  {
-#    "title" : ,
-#    "description" : ,
- #    "options": [, ],
- #       "newrooms": [, ]
-  #},
