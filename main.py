@@ -57,15 +57,15 @@ rooms = {
   "dance" :  {
     "title" : 'dance floor' ,
     "description" : 'The music is blasting in your ears. \n Everybody around you is dancing and having fun. \n You see this girl dancing alone. \n Do you go up to her? \n' ,
-    "options": ['yes', 'no', 'bar' ],
-    "newrooms": ['girl','inside','bar' ]
+    "options": ['yes', 'bar' ],
+    "newrooms": ['girl','bar' ]
   },
 
   "bar" :  {
     "title" : 'At the bar' ,
     "description" : 'you take a seat at the bar and the bartender greets you: "aight mate, what can i get you? \n' ,
-     "options": ['vodka', 'tequila', 'the girl'],
-        "newrooms": ['shot', 'shot']
+     "options": ['vodka', 'tequila', 'the girl', 'leave'],
+        "newrooms": ['shot', 'shot', '????', 'inside']
   },
 
   "shot" :  {
@@ -94,7 +94,7 @@ rooms = {
   "title" : "Good shit bro",
   "description" : "You actually did it... You got laid and lost your virginity.\n Although you did not beat the goal of stealing the money which means you did not officially win.\n Care to try again? ",
   "options": ["exit", "retry"],
-  "newrooms": ["", "restart",]
+  "newrooms": ["", "start",]
   },
   
   "death1" :  {
@@ -106,12 +106,27 @@ rooms = {
   
   "death2" :  {
   "title" : "No Bitches?",
-  "description" : "Unfortunately you failed to get bitches...\n i guess you really are a disappointment,\n would you like to try again? ",
+  "description" : "Unfortunately you failed to get bitches...\n I guess you really are a disappointment,\n would you like to try again? ",
   "options" : ["exit" , "retry"],
   "newrooms": ["", "start"]
   },
-  
+  "dronken" :  {
+  "title" : "Drunk?",
+  "description" : "You got too drunk and fucking died of a fatal fucking anal cancer abortion fuck you and please dont play again",
+  "options" : ["exit" , "retry"],
+  "newrooms": ["", "start"]
+  },
+    
 }
+drankjes = 0
+
+def drankjesteller():
+    global drankjes
+    drankjes = drankjes + 1
+    if drankjes == 5:
+      drankjes = 0
+ #   print(drankjes)
+  
 
 #the game "engine"
 def game(room):
@@ -126,24 +141,33 @@ def game(room):
   print(Fore.BLUE,title)
   print(Fore.LIGHTBLUE_EX,description)
   print(Fore.LIGHTWHITE_EX," Choose one of these options: ")  
-
   print("", ", ".join(options))
-  
+
+  if title == "Your shot is ready":
+   drankjesteller()
+
   userinput = input()
   userinput = userinput.lower()
   
   if userinput in options:
    if userinput == ("exit"):
      sys.exit()
+    
    else :
     index = options.index(userinput)
+
     #index uilezen en opzoeken in newlist
     #print(index)  
     #print(newrooms[index])
-    game(newrooms[index])
+
+    if drankjes == 4:
+      drankjesteller()
+      game("dronken")
+    else: 
+     game(newrooms[index])
   else:
     print('Thats not an option... Try again genius!')
 
     game(room)
-  
+
 game("start")
