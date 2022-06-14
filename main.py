@@ -6,7 +6,7 @@ import sys
 rooms = {
  
    "start" :  {
-    "title" : 'Welcome to the Club! \n Your goal is to survive the night and steal all the money. \n To do this you will have to make crucial choises. \n Good luck adventurer! \n'
+    "title" : 'Welcome to the Club! \n Your goal is to survive the night and steal all the money. \n To do this you will have to make crucial choices. \n Good luck adventurer! \n'
     ,
     "description" : "",
     "options": ["start", ],
@@ -15,14 +15,14 @@ rooms = {
 
     "outside" :  {
     "title" : 'Outside the Club' ,
-    "description" : "You arrived at the Club.\n In the distance you see the front door to the club and a \n ladder to the roof.",
+    "description" : "You arrived at the Club.\n In the distance you see the front door to the club and a ladder to the roof.",
     "options": ["door", "ladder"],
     "newrooms": ["inside", "ladder"]
   },
 
   "ladder" :  {
   "title" : "Climbing the ladder...",
-  "description" : "You started to climb the ladder but halfway you hear the ladder starting to crack. \n What do you do?",
+  "description" : "You started to climb the ladder but halfway you hear the ladder starting to crack.\n What do you do?",
   "options": ["up", "down"],
   "newrooms": ["roof", "outside"]
   },
@@ -35,14 +35,14 @@ rooms = {
   },
 
   "cabin" :  {
-  "title" : "In the roofcabin",
-  "description" : "You secretly entered the roofcabin and see a note... \n do you read it or go back to the roof?",
+  "title" : "In the Roofcabin",
+  "description" : "You secretly entered the roofcabin and see a note... \n Do you read it or go back to the roof?",
   "options": ["read note" , "roof"],
   "newrooms": ["note","roof"]
   },
   
   "note" :  {
-  "title" : "The note says: 'code : 42069'",
+  "title" : "The note says: 'office code : 42069'",
   "description" : "",
   "options": ["okay",],
   "newrooms": ["cabin"]
@@ -65,7 +65,7 @@ rooms = {
   "inoffice" :  {
   "title" : "Inside the office",
   "description" : "You cracked the code. Your inside the office now. You see a big box in the corner of the room. You also see a desk with files on it. Where do you look? remember your looking for the money",
-  "options" : ["boxes" , "drawers" , "files"],
+  "options" : ["box" , "drawers" , "files"],
   "newrooms": ["box1", "drawer" , "files"]
   },
 
@@ -73,16 +73,15 @@ rooms = {
   "title" : "Inside the office",
   "description" : "where do you look?",
   "options" : ["box" , "drawers" , "files"],
-  "newrooms": ["box1", "drawers" , "files"]
+  "newrooms": ["box1", "drawer" , "files"]
   },
 
   "inoffice3" :  {
   "title" : "Inside the office",
   "description" : "",
-  "options" : ["box" ,"drawer", "files"],
+  "options" : ["box" ,"drawers", "files"],
   "newrooms": ["box2" ,"drawer2", "files2"]
   },
-
 
    "drawer" :  {
   "title" : "You found a key!",
@@ -102,13 +101,13 @@ rooms = {
   "title" : "Its locked...",
   "description" : "The box has a lock on it and it's made of steel so you won't be able to break it.\n You need to find a key to open the box.",
   "options" : ["back"],
-  "newrooms": ["inoffice2" ]
+  "newrooms": ["inoffice2"]
   },
 
      "box2" :  {
   "title" : "The key fits!",
   "description" : "You opened the box with the key, its full of money. \n Quickly take the money! ",
-  "options" : ["Take"],
+  "options" : ["take"],
   "newrooms": ["run"]
   },
 
@@ -186,7 +185,7 @@ rooms = {
 
   "death3" :  {
   "title" : "Wrong direction",
-  "description" : "One Direction was not on your side today... You chose the wrong direction and the club Crew caught you. ",
+  "description" : "One Direction was not on your side today... You chose the wrong direction and the Club crew caught you. \n (tip: You can find the correct direction somewhere in the Club)",
   "options" : ["exit" , "retry"],
   "newrooms": ["", "start"]
   },
@@ -206,10 +205,10 @@ rooms = {
   },
 
   "south" :  {
-  "title" : "Why you going south...",
-  "description" : "You chose to ",
-  "options" : ["north" , "east" , "south" , "west"],
-  "newrooms": ["death3", "death3" , "south", "win"]
+  "title" : "Why are you going south...",
+  "description" : "You chose to go back to the club and got caught,\n why did you do that? ",
+  "options" : ["exit" , "retry"],
+  "newrooms": ["", "start"]
   },
   
    "win" :  {
