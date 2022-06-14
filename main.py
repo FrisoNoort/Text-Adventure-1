@@ -63,6 +63,53 @@ rooms = {
   "options": ["code", "leave", "guards"],
   "newrooms": ["code", "inside", "death1"]
   },
+
+     "inoffice" :  {
+  "title" : "Inside the office",
+  "description" : "You cracked the code. Your inside the office now. You see a big box in the corner of the room. You also see a desk with files on it. Where do you look? remember your looking for the money",
+  "options" : ["boxes" , "drawers" , "files"],
+  "newrooms": ["box1", "drawers" , "files"]
+  },
+
+       "inoffice2" :  {
+  "title" : "Inside the office",
+  "description" : "",
+  "options" : ["boxes" , "drawers" , "files"],
+  "newrooms": ["box1", "drawers" , "files"]
+  },
+
+
+   "drawer" :  {
+  "title" : "",
+  "description" : "You found a key insede the office",
+  "options" : ["box" , "files"],
+  "newrooms": ["box2", ""]
+  },
+
+     "box1" :  {
+  "title" : "Its locked...",
+  "description" : "You need to find a key to open it. Where do you look?",
+  "options" : ["drawers" , ""],
+  "newrooms": ["drawers", ""]
+  },
+
+     "box2" :  {
+  "title" : "The key fits!",
+  "description" : "You opened the box with the key, its full of money. \n Quickly take the money! ",
+  "options" : ["Take"],
+  "newrooms": ["run"]
+  },
+
+
+   "files" :  {
+  "title" : "",
+  "description" : "hmmm, these are just old files. Do you read them? \n",
+  "options" : ["read" , "leave"],
+  "newrooms": ["death1", "inoffice2"]
+  },
+
+
+
   
   "dance" :  {
     "title" : 'dance floor' ,
