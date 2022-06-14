@@ -50,21 +50,21 @@ rooms = {
   
   "inside" :  {
   "title" : "In the Club",
-  "description" : "You entered the club and can choose to do three things:\n go to the dancefloor or go to the bar, you also see an office in the corner of your eye.",
+  "description" : "You entered the club and can choose to do four things:\n go to the dancefloor or go to the bar, you also see an office in the corner of your eye. You can also go back outside.",
   "options": ["dance", "bar", "office", "outside"],
   "newrooms": ["dance", "bar", "frontoffice", "outside"]
   },
 
   "frontoffice" :  {
   "title" : "Infront of The office",
-  "description" : "You are currently infront of the office, you see 2 big guards down the hall and the office has a code lock on it.\n Do you guess the code, leave the frontoffice or go talk to the guards.",
+  "description" : "You are currently infront of the office, you see 2 big guards down the hall and the office has a code lock on it.\n Do you enter the code, leave the frontoffice or go talk to the guards.",
   "options": ["code", "leave", "guards"],
   "newrooms": ["code", "inside", "death1"]
   },
 
   "inoffice" :  {
   "title" : "Inside the office",
-  "description" : "You cracked the code. Your inside the office now. You see a big box in the corner of the room. You also see a desk with files on it. Where do you look? remember your looking for the money",
+  "description" : "You cracked the code. You're inside the office now. You see a big box in the corner of the room. You also see a desk with files on it. Where do you look? remember you are looking for the money.",
   "options" : ["box" , "drawers" , "files"],
   "newrooms": ["box1", "drawer" , "files"]
   },
@@ -222,14 +222,14 @@ rooms = {
   "title" : "code lock",
   "description" : "You see the code lock is locked by 5 numbers. \n Do you want to try or go back?",
   "options" : ["try" , "go back"],
-  "newrooms": ["lock1", "inside"]
+  "newrooms": ["lock1", "frontoffice"]
   },
   
    "lock0" :  {
   "title" : "Oops..",
-  "description" : "You did not get the code correct. \n Want to try again?",
+  "description" : "You did not get the code correct. \n Want to try again? \n (tip: you can find the code somewhere outside.)",
   "options" : ["try" , "go back"],
-  "newrooms": ["lock1", "inside"]
+  "newrooms": ["lock1", "frontoffice"]
   },
   
   "lock1" :  {
