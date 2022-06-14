@@ -5,7 +5,6 @@ import sys
 # all the rooms!
 rooms = {
  
-
    "start" :  {
     "title" : 'Welcome to the Club! \n Your goal is to survive the night and steal all the money. \n To do this you will have to make crucial choises. \n Good luck adventurer! \n'
     ,
@@ -20,7 +19,6 @@ rooms = {
     "options": ["door", "ladder"],
     "newrooms": ["inside", "ladder"]
   },
-
 
   "ladder" :  {
   "title" : "Climbing the ladder...",
@@ -64,21 +62,21 @@ rooms = {
   "newrooms": ["code", "inside", "death1"]
   },
 
-      "inoffice" :  {
+  "inoffice" :  {
   "title" : "Inside the office",
   "description" : "You cracked the code. Your inside the office now. You see a big box in the corner of the room. You also see a desk with files on it. Where do you look? remember your looking for the money",
   "options" : ["boxes" , "drawers" , "files"],
   "newrooms": ["box1", "drawer" , "files"]
   },
 
-       "inoffice2" :  {
+  "inoffice2" :  {
   "title" : "Inside the office",
   "description" : "where do you look?",
   "options" : ["box" , "drawers" , "files"],
   "newrooms": ["box1", "drawers" , "files"]
   },
 
-       "inoffice3" :  {
+  "inoffice3" :  {
   "title" : "Inside the office",
   "description" : "",
   "options" : ["box" ,"drawer", "files"],
@@ -88,7 +86,7 @@ rooms = {
 
    "drawer" :  {
   "title" : "You found a key!",
-  "description" : "You found a key inside the messy drawer. \n ",
+  "description" : "You found a key inside the messy drawer. I think it might fit a lock. \n ",
   "options" : ["back" ],
   "newrooms": ["inoffice3"]
   },
@@ -102,7 +100,7 @@ rooms = {
 
      "box1" :  {
   "title" : "Its locked...",
-  "description" : "It has a lock on it. It looks importent. You need to find a key to open it.",
+  "description" : "The box has a lock on it and it's made of steel so you won't be able to break it.\n You need to find a key to open the box.",
   "options" : ["back"],
   "newrooms": ["inoffice2" ]
   },
@@ -129,9 +127,6 @@ rooms = {
   "newrooms": ["death1", "inoffice3"]
   },
 
-
-
-
   "dance" :  {
     "title" : 'dance floor' ,
     "description" : 'The music is blasting in your ears. \n Everybody around you is dancing and having fun. \n You see this brunette girl dancing alone. \n Do you go up to her? \n' ,
@@ -156,7 +151,7 @@ rooms = {
   
   "girl" :  {
     "title" : "You start a conversation with the beautiful girl",
-    "description" : "You think she's beautiful so you use your best pickup-line. Better choose wisely... \n 1: Are you wifi because i am totaly feeling a conection. \n 2: Treat me like a pirate and give me your booty \n 3: I may not go down in history, but i will go down on you. \n 4: Aside from being sexy what do you do for a living ",
+    "description" : "You think she's beautiful so you use your best pickup-line. Better choose wisely... \n 1: Are you wi-fi because i am totaly feeling a connection. \n 2: Treat me like a pirate and give me your booty. \n 3: I may not go down in history, but i will go down on you. \n 4: Aside from being sexy what do you do for a living? ",
     "options": ['1','2','3','4', ],
     "newrooms": ["death2","death2","back","back"]
   },
@@ -198,7 +193,7 @@ rooms = {
   
   "dronken" :  {
   "title" : "Drunk?",
-  "description" : "You got too drunk and fucking died of a fatal fucking anal cancer abortion fuck you and please dont play again you alcoholic.",
+  "description" : "You drank too much and died of alcohol poisoning.\n Please dont play again you alcoholic.",
   "options" : ["exit" , "retry"],
   "newrooms": ["", "start"]
   },
@@ -207,11 +202,18 @@ rooms = {
   "title" : "Running away",
   "description" : "You ran out the back door but an alarm rang and you are being chased.\n What direction are you heading?",
   "options" : ["north" , "east" , "south" , "west"],
-  "newrooms": ["death3", "death3" , "death3", "win"]
+  "newrooms": ["death3", "death3" , "south", "win"]
+  },
+
+  "south" :  {
+  "title" : "Why you going south...",
+  "description" : "You chose to ",
+  "options" : ["north" , "east" , "south" , "west"],
+  "newrooms": ["death3", "death3" , "south", "win"]
   },
   
    "win" :  {
-  "title" : "GGWP You beat the Club!",
+  "title" : "You beat the Club!",
   "description" : "When you headed west, there was an unlocked Maserati Quattroporte which you used to get away.\n Thanks for Playing!",
   "options" : ["exit" , "retry"],
   "newrooms": ["", "start"]
