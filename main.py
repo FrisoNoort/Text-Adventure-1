@@ -51,8 +51,8 @@ rooms = {
   "inside" :  {
   "title" : "In the Club",
   "description" : "You entered the club and can choose to do three things:\n go to the dancefloor or go to the bar, you also see an office in the corner of your eye.",
-  "options": ["dance", "bar", "office"],
-  "newrooms": ["dance", "bar", "frontoffice"]
+  "options": ["dance", "bar", "office", "outside"],
+  "newrooms": ["dance", "bar", "frontoffice", "outside"]
   },
 
   "frontoffice" :  {
