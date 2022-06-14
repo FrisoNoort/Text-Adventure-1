@@ -26,14 +26,14 @@ rooms = {
   "title" : "Climbing the ladder...",
   "description" : "You started to climb the ladder but halfway you hear the ladder starting to crack. \n What do you do?",
   "options": ["up", "down"],
-  "newrooms": ["roof", "start"]
+  "newrooms": ["roof", "outside"]
   },
  
   "roof" :  {
   "title" : "On the roof!",
   "description" : "You barely made it to the roof, you are so frightened you are debating to go back down with the ladder but you also see a cabin up ahead ",
   "options": ["cabin", "go back"],
-  "newrooms": ["cabin", "start"]
+  "newrooms": ["cabin", "outside"]
   },
 
   "cabin" :  {
@@ -64,7 +64,7 @@ rooms = {
   "newrooms": ["code", "inside", "death1"]
   },
 
-     "inoffice" :  {
+  "inoffice" :  {
   "title" : "Inside the office",
   "description" : "You cracked the code. Your inside the office now. You see a big box in the corner of the room. You also see a desk with files on it. Where do you look? remember your looking for the money",
   "options" : ["boxes" , "drawers" , "files"],
@@ -109,8 +109,6 @@ rooms = {
   },
 
 
-
-  
   "dance" :  {
     "title" : 'dance floor' ,
     "description" : 'The music is blasting in your ears. \n Everybody around you is dancing and having fun. \n You see this brunette girl dancing alone. \n Do you go up to her? \n' ,
@@ -120,14 +118,14 @@ rooms = {
 
   "bar" :  {
     "title" : 'At the bar' ,
-    "description" : 'you take a seat at the bar and the bartender greets you: "aight mate, what can i get you? \n You also see a beautiful blonde girl sitting next to you and you want to make a move. What do you do?' ,
+    "description" : "you take a seat at the bar and the bartender greets you: \n'Hey mate, are you from the West? Because you know what they say: West is best'. \n You also see a beautiful blonde girl sitting next to you and you want to make a move. What do you do?" ,
      "options": ['vodka', 'tequila', 'girl', 'leave'],
         "newrooms": ['shot', 'shot', 'girl', 'inside']
   },
 
   "shot" :  {
     "title" : "Your shot is ready" ,
-    "description" : "You took the shot like a man, want to take another?" ,
+    "description" : "You took the shot like a man, ready to take another?" ,
      "options": ['another', 'no' ],
         "newrooms": ['shot','bar' ]
   },
@@ -167,6 +165,14 @@ rooms = {
   "options" : ["exit" , "retry"],
   "newrooms": ["", "start"]
   },
+
+  "death3" :  {
+  "title" : "Wrong direction",
+  "description" : "One Direction was not on your side today... You chose the wrong direction and the club Crew caught you. ",
+  "options" : ["exit" , "retry"],
+  "newrooms": ["", "start"]
+  },
+  
   "dronken" :  {
   "title" : "Drunk?",
   "description" : "You got too drunk and fucking died of a fatal fucking anal cancer abortion fuck you and please dont play again you alcoholic.",
@@ -175,15 +181,15 @@ rooms = {
   },
 
    "run" :  {
-  "title" : "",
-  "description" : "",
-  "options" : ["" , ""],
-  "newrooms": ["", ""]
+  "title" : "Running away",
+  "description" : "You ran out the back door but an alarm rang and you are being chased.\n What direction are you heading?",
+  "options" : ["north" , "east" , "south" , "west"],
+  "newrooms": ["death3", "death3" , "death3", "win"]
   },
   
    "win" :  {
-  "title" : "You complete the goal and won the game! You stole the money and survived the night. ",
-  "description" : "",
+  "title" : "GGWP You beat the Club!",
+  "description" : "When you headed west, there was an unlocked Maserati Quattroporte which you used to get away.\n Thanks for Playing!",
   "options" : ["exit" , "retry"],
   "newrooms": ["", "start"]
   },
