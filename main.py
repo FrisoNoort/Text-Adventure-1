@@ -64,33 +64,47 @@ rooms = {
   "newrooms": ["code", "inside", "death1"]
   },
 
-  "inoffice" :  {
+      "inoffice" :  {
   "title" : "Inside the office",
   "description" : "You cracked the code. Your inside the office now. You see a big box in the corner of the room. You also see a desk with files on it. Where do you look? remember your looking for the money",
   "options" : ["boxes" , "drawers" , "files"],
-  "newrooms": ["box1", "drawers" , "files"]
+  "newrooms": ["box1", "drawer" , "files"]
   },
 
        "inoffice2" :  {
   "title" : "Inside the office",
-  "description" : "",
-  "options" : ["boxes" , "drawers" , "files"],
+  "description" : "where do you look?",
+  "options" : ["box" , "drawers" , "files"],
   "newrooms": ["box1", "drawers" , "files"]
+  },
+
+       "inoffice3" :  {
+  "title" : "Inside the office",
+  "description" : "",
+  "options" : ["box" ,"drawer", "files"],
+  "newrooms": ["box2" ,"drawer2", "files2"]
   },
 
 
    "drawer" :  {
-  "title" : "THE KEY!",
-  "description" : "You found a key inside the messy drawer. \n Do you try it",
-  "options" : ["box" , "files"],
-  "newrooms": ["box2", ""]
+  "title" : "You found a key!",
+  "description" : "You found a key inside the messy drawer. \n ",
+  "options" : ["back" ],
+  "newrooms": ["inoffice3"]
+  },
+
+     "drawer2" :  {
+  "title" : "You've already looked here!",
+  "description" : "Its just a messy drawer. \n ",
+  "options" : ["back" ],
+  "newrooms": ["inoffice3"]
   },
 
      "box1" :  {
   "title" : "Its locked...",
-  "description" : "You need to find a key to open it. Where do you look?",
-  "options" : ["drawers" , "files"],
-  "newrooms": ["drawers", "files"]
+  "description" : "It has a lock on it. It looks importent. You need to find a key to open it.",
+  "options" : ["back"],
+  "newrooms": ["inoffice2" ]
   },
 
      "box2" :  {
@@ -107,6 +121,15 @@ rooms = {
   "options" : ["read" , "leave"],
   "newrooms": ["death1", "inoffice2"]
   },
+
+    "files2" :  {
+  "title" : "",
+  "description" : "hmmm, these are just old files. Do you read them? \n",
+  "options" : ["read" , "leave"],
+  "newrooms": ["death1", "inoffice3"]
+  },
+
+
 
 
   "dance" :  {
