@@ -80,8 +80,8 @@ rooms = {
 
 
    "drawer" :  {
-  "title" : "",
-  "description" : "You found a key insede the office",
+  "title" : "THE KEY!",
+  "description" : "You found a key inside the messy drawer. \n Do you try it",
   "options" : ["box" , "files"],
   "newrooms": ["box2", ""]
   },
@@ -89,8 +89,8 @@ rooms = {
      "box1" :  {
   "title" : "Its locked...",
   "description" : "You need to find a key to open it. Where do you look?",
-  "options" : ["drawers" , ""],
-  "newrooms": ["drawers", ""]
+  "options" : ["drawers" , "files"],
+  "newrooms": ["drawers", "files"]
   },
 
      "box2" :  {
