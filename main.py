@@ -113,16 +113,16 @@ rooms = {
   
   "dance" :  {
     "title" : 'dance floor' ,
-    "description" : 'The music is blasting in your ears. \n Everybody around you is dancing and having fun. \n You see this girl dancing alone. \n Do you go up to her? \n' ,
+    "description" : 'The music is blasting in your ears. \n Everybody around you is dancing and having fun. \n You see this brunette girl dancing alone. \n Do you go up to her? \n' ,
     "options": ['yes', 'bar' ],
     "newrooms": ['girl','bar' ]
   },
 
   "bar" :  {
     "title" : 'At the bar' ,
-    "description" : 'you take a seat at the bar and the bartender greets you: "aight mate, what can i get you? \n' ,
-     "options": ['vodka', 'tequila', 'the girl', 'leave'],
-        "newrooms": ['shot', 'shot', '????', 'inside']
+    "description" : 'you take a seat at the bar and the bartender greets you: "aight mate, what can i get you? \n You also see a beautiful blonde girl sitting next to you and you want to make a move. What do you do?' ,
+     "options": ['vodka', 'tequila', 'girl', 'leave'],
+        "newrooms": ['shot', 'shot', 'girl', 'inside']
   },
 
   "shot" :  {
@@ -134,17 +134,17 @@ rooms = {
 
   
   "girl" :  {
-    "title" : "You walk up to her and start dancing",
+    "title" : "You start a conversation with the beautiful girl",
     "description" : "You think she's beautiful so you use your best pickup-line. Better choose wisely... \n 1: Are you wifi because i am totaly feeling a conection. \n 2: Treat me like a pirate and give me your booty \n 3: I may not go down in history, but i will go down on you. \n 4: Aside from being sexy what do you do for a living ",
     "options": ['1','2','3','4', ],
     "newrooms": ["death2","death2","back","back"]
   },
   
   "back" :  {
-    "title" : 'To the back?' ,
+    "title" : 'Go Home?' ,
     "description" : 'The girl liked ur pickup-line so much that she asked you to go home with her.\n Do you dare to go?' ,
     "options": ['yes', 'no',],
-    "newrooms": ['home','dance']
+    "newrooms": ['home','inside']
   },
 
   "home" :  {
@@ -169,7 +169,7 @@ rooms = {
   },
   "dronken" :  {
   "title" : "Drunk?",
-  "description" : "You got too drunk and fucking died of a fatal fucking anal cancer abortion fuck you and please dont play again",
+  "description" : "You got too drunk and fucking died of a fatal fucking anal cancer abortion fuck you and please dont play again you alcoholic.",
   "options" : ["exit" , "retry"],
   "newrooms": ["", "start"]
   },
