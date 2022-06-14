@@ -1,11 +1,6 @@
-  "no" :  {
-    "title" : "no no no",
-    "description" : "You died poopoohead",
-    "options" : ["start"]
-  },
-    
-  "dancefloor" : {
-    "title": "On the dance floor",
-    "description" : "You spot a girl dancing alone",
-    "options" : ["Dance with her", "Dance alone", "bar"]
+ "" :  {
+  "title" : "",
+  "description" : "",
+  "options" : ["" , ""],
+  "newrooms": ["", ""]
   },

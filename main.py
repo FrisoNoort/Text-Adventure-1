@@ -4,13 +4,23 @@ import sys
 
 # all the rooms!
 rooms = {
-  "start" :  {
-    "title" : 'Welcome to the Club! \n Your goal is to survive the night and steal all the money. \n To do this you will have to make crucial choices. \n Good luck adventurer! \n'
+ 
+
+   "start" :  {
+    "title" : 'Welcome to the Club! \n Your goal is to survive the night and steal all the money. \n To do this you will have to make crucial choises. \n Good luck adventurer! \n'
     ,
-    "description" : "You arrived at the Club.\n In the distance you see the front door to the club and a ladder to the roof.",
+    "description" : "",
+    "options": ["start", ],
+    "newrooms": ["outside",]
+  },
+
+    "outside" :  {
+    "title" : 'Outside the Club' ,
+    "description" : "You arrived at the Club.\n In the distance you see the front door to the club and a \n ladder to the roof.",
     "options": ["door", "ladder"],
     "newrooms": ["inside", "ladder"]
   },
+
 
   "ladder" :  {
   "title" : "Climbing the ladder...",
@@ -116,6 +126,29 @@ rooms = {
   "options" : ["exit" , "retry"],
   "newrooms": ["", "start"]
   },
+
+   "run" :  {
+  "title" : "",
+  "description" : "",
+  "options" : ["" , ""],
+  "newrooms": ["", ""]
+  },
+  
+   "win" :  {
+  "title" : "You complete the goal and won the game! You stole the money and survived the night. ",
+  "description" : "",
+  "options" : ["exit" , "retry"],
+  "newrooms": ["", "start"]
+  },
+
+   "code" :  {
+  "title" : "code room",
+  "description" : "",
+  "options" : ["" , ""],
+  "newrooms": ["", ""]
+  },
+
+  
     
 }
 drankjes = 0
