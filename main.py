@@ -140,7 +140,7 @@ def game(room):
 
   print(Fore.BLUE,title)
   print(Fore.LIGHTBLUE_EX,description)
-  print(Fore.LIGHTWHITE_EX," Choose one of these options: ")  
+  print(Fore.LIGHTWHITE_EX,"Choose one of these options: ")  
   print("", ", ".join(options))
 
   if title == "Your shot is ready":
