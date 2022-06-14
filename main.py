@@ -61,7 +61,7 @@ rooms = {
   "title" : "Infront of The office",
   "description" : "You are currently infront of the office, you see 2 big guards down the hall and the office has a code lock on it.\n Do you guess the code, leave the frontoffice or go talk to the guards.",
   "options": ["code", "leave", "guards"],
-  "newrooms": ["", "inside", "death1"]
+  "newrooms": ["code", "inside", "death1"]
   },
   
   "dance" :  {
@@ -142,14 +142,53 @@ rooms = {
   },
 
    "code" :  {
-  "title" : "code room",
-  "description" : "",
-  "options" : ["" , ""],
-  "newrooms": ["", ""]
+  "title" : "code lock",
+  "description" : "You see the code lock is locked by 5 numbers. \n Do you want to try or go back?",
+  "options" : ["try" , "go back"],
+  "newrooms": ["lock1", "inside"]
+  },
+  
+   "lock0" :  {
+  "title" : "Oops..",
+  "description" : "You did not get the code correct. \n Want to try again?",
+  "options" : ["try" , "go back"],
+  "newrooms": ["lock1", "inside"]
+  },
+  
+  "lock1" :  {
+  "title" : "code lock",
+  "description" : "Lets see if you have it in you to guess the numbers!\n Type the 5 number code in a row.",
+  "options" : ["0", "1" , "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+  "newrooms": ["lock0", "lock0" , "lock0", "lock0", "lock2", "lock0", "lock0", "lock0", "lock0", "lock0", "lock0"]
   },
 
+  "lock2" :  {
+  "title" : "code lock",
+  "description" : "Lets see if you have it in you to guess the numbers!\n Type the 5 number code in a row.",
+  "options" : ["0", "1" , "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+  "newrooms": ["lock0", "lock0" , "lock3", "lock0", "lock0", "lock0", "lock0", "lock0", "lock0", "lock0", "lock0"]
+  },
+  "lock3" :  {
+  "title" : "code lock",
+  "description" : "Lets see if you have it in you to guess the numbers!\n Type the 5 number code in a row.",
+  "options" : ["0", "1" , "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+  "newrooms": ["lock4", "lock0" , "lock0", "lock0", "lock0", "lock0", "lock0", "lock0", "lock0", "lock0", "lock0"]
+},  
+
+  "lock4" :  {
+  "title" : "code lock",
+  "description" : "Lets see if you have it in you to guess the numbers!\n Type the 5 number code in a row.",
+  "options" : ["0", "1" , "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+  "newrooms": ["lock0", "lock0" , "lock0", "lock0", "lock0", "lock0", "lock5", "lock0", "lock0", "lock0", "lock0"]
+}, 
+
+  "lock5" :  {
+  "title" : "code lock",
+  "description" : "Lets see if you have it in you to guess the numbers!\n Type the 5 number code in a row.",
+  "options" : ["0", "1" , "2", "3", "4", "5", "6", "7", "8", "9", "10"],
+  "newrooms": ["lock0", "lock0" , "lock0", "lock0", "lock0", "lock0", "lock0", "lock0", "lock0", "inoffice", "lock0"]
+}, 
   
-    
 }
 drankjes = 0
 
